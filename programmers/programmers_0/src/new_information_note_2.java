@@ -3,6 +3,8 @@
 public class new_information_note_2 {
 }
 
+// 뭐,, 안 써도 크게 문제 없다.
+
 // 'Scanner' 객체를 닫아 자원을 해제시켜주는 sc.close();
 // 이거 안 써도 오류가 생기지는 않더라구요. 꼭 써야할까? 안 써도 상관없을까?
 

@@ -32,3 +32,5 @@ public class level_0_120585 {
         return answer;
     }
 }
+
+// 클래스가 아닌 메서드에서부터 시작.
