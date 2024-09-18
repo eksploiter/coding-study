@@ -13,5 +13,3 @@ public class Main {
         }
     }
 }
-
-// git commit test
