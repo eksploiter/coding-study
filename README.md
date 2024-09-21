@@ -1,2 +1,2 @@
-## coding study
+# coding study
 - Study on Java coding
