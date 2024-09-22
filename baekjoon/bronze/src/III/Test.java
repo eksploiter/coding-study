@@ -63,3 +63,5 @@ public class Test {
 //        scanner.close();
 //    }
 //}
+
+//scanner.hasNextLine()은 입력이 더 있는지 확인하는 메서드로, 입력이 남아 있는 동안 while 루프가 반복됩니다.
