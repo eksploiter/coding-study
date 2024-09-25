@@ -37,40 +37,76 @@ import java.util.Scanner;
 // char ch = 'c';
 // int index = ch - 'a'; // 'c' 의 아스키 값(99) - 'a'의 아스키 값(97) = 2
 
+//public class Test {
+//    public static void main(String[] args) {
+//        // 스캐너를 통해 입력을 받습니다.
+//        Scanner sc = new Scanner(System.in);
+//        String word = sc.nextLine();
+//
+//        // 총 걸리는 시간을 저장할 변수
+//        int totalTime = 0;
+//
+//        // 입력된 단어의 각 문자에 대해
+//        for (int i = 0; i < word.length(); i++) {
+//            char c = word.charAt(i);
+//
+//            // 각 알파벳에 맞는 시간을 계산합니다.
+//            if (c >= 'A' && c <= 'C') {
+//                totalTime += 3;
+//            } else if (c >= 'D' && c <= 'F') {
+//                totalTime += 4;
+//            } else if (c >= 'G' && c <= 'I') {
+//                totalTime += 5;
+//            } else if (c >= 'J' && c <= 'L') {
+//                totalTime += 6;
+//            } else if (c >= 'M' && c <= 'O') {
+//                totalTime += 7;
+//            } else if (c >= 'P' && c <= 'S') {
+//                totalTime += 8;
+//            } else if (c >= 'T' && c <= 'V') {
+//                totalTime += 9;
+//            } else if (c >= 'W' && c <= 'Z') {
+//                totalTime += 10;
+//            }
+//        }
+//
+//        // 총 걸리는 시간을 출력합니다.
+//        System.out.println(totalTime);
+//    }
+//}
+
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
-        // 스캐너를 통해 입력을 받습니다.
-        Scanner sc = new Scanner(System.in);
-        String word = sc.nextLine();
+        Scanner scanner = new Scanner(System.in);
 
-        // 총 걸리는 시간을 저장할 변수
-        int totalTime = 0;
+        int N = scanner.nextInt();
+        int count = 0;
 
-        // 입력된 단어의 각 문자에 대해
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
-
-            // 각 알파벳에 맞는 시간을 계산합니다.
-            if (c >= 'A' && c <= 'C') {
-                totalTime += 3;
-            } else if (c >= 'D' && c <= 'F') {
-                totalTime += 4;
-            } else if (c >= 'G' && c <= 'I') {
-                totalTime += 5;
-            } else if (c >= 'J' && c <= 'L') {
-                totalTime += 6;
-            } else if (c >= 'M' && c <= 'O') {
-                totalTime += 7;
-            } else if (c >= 'P' && c <= 'S') {
-                totalTime += 8;
-            } else if (c >= 'T' && c <= 'V') {
-                totalTime += 9;
-            } else if (c >= 'W' && c <= 'Z') {
-                totalTime += 10;
+        for (int i = 0; i < N; i++) {
+            int num = scanner.nextInt();
+            if (isPrime(num)) {
+                count++;
             }
         }
 
-        // 총 걸리는 시간을 출력합니다.
-        System.out.println(totalTime);
+        System.out.println(count);
+
+        scanner.close();
+    }
+
+    // 소수를 판별하는 메서드
+    public static boolean isPrime(int num) {
+        if (num < 2) { // 2보다 작은 수는 소수가 아님
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) { // 제곱근까지 확인
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
+
