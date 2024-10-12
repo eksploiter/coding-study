@@ -32,7 +32,7 @@ public class Bronze_1157 {
             if (frequency[i] > maxFrequency) {
                 maxFrequency = frequency[i];
                 mostFrequencyChar = (char) (i + 'A');
-            } else if (frequency[i] == maxFrequency) {
+            } else if (frequency[i] == maxFrequency) { // 이 부분은 같은 같은 빈도의 수가 있는지 찾아내는 곳
                 mostFrequencyChar = '?';
             }
         }
