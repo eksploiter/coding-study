@@ -9,7 +9,7 @@ package I.bronze_1157;
 
 import java.util.Scanner;
 
-public class Bronze_1157 {
+public class Bronze_1157 { // 이거 연습 필요
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
