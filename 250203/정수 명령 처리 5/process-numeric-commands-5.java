@@ -1,33 +1,41 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        // Please write your code here.
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList arr = new ArrayList();
 
-        List<Integer> list = new ArrayList<>();
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer str;
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < N; i++) {
-            String line = scanner.nextLine();
-            String[] parts = line.split(" ");
+        while (N-->0){
+            str = new StringTokenizer(br.readLine(), " ");
 
-            switch (parts[0]) {
-                case "pulsh_back":
-                    int target = Integer.parseInt(parts[1]);
-                    list.add(target);
-                    break;
-                case "pop_back":
-                    list.remove(list.size() - 1);
-                    break;
-                case "get":
-                    int index = Integer.parseInt(parts[1]);
-                    System.out.println(list.get(index - 1));
-                    break;
-                case "size":
-                    System.out.println(list.size());
-                    break;
+            int strLen = str.countTokens();
+
+            if (strLen > 1){
+                String str1 = str.nextToken();
+                int str2 = Integer.parseInt(str.nextToken());
+
+                if (str1.equals("push_back")){
+                    arr.add(str2);
+                } else {
+                    sb.append(arr.get(str2-1)).append("\n");
+                }
+            } else {
+                String str1 = str.nextToken();
+                if (str1.equals("pop_back")){
+                    arr.remove(arr.size()-1);
+
+                } else if (str1.equals("size")){
+                    sb.append(arr.size()).append("\n");
+                }
             }
         }
+
+        System.out.println(sb);
+        
     }
 }
