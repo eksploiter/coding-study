@@ -25,7 +25,7 @@ public class Main {
                     System.out.println(list.get(index - 1));
                     break;
                 case "size":
-                    System.out.prinln(list.size());
+                    System.out.println(list.size());
                     break;
             }
         }
